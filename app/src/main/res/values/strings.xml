@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Chat App</string>
+    <string name="menu_logout">Log out</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_register">Sign up</string>
+    <string name="prompt_name">Username</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="required">required</string>
+    <string name="action_sign_in">Already a member? Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up">No account yet? Create one</string>
+    <string name="action_sign_up_short">Create Account</string>
+    <string name="welcome">"Welcome "</string>
+    <string name="registered">"Registered"</string>
+    <string name="invalid_credentials">Invalid email or password</string>
+    <string name="invalid_username">Not a valid Email</string>
+    <string name="invalid_password">Password must be > 5 characters</string>
+    <string name="invalid_confirm">Different password</string>
+    <string name="user_exists">Email already exists</string>
+    <string name="weak_password">This password is too weak</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="register_failed">"Register failed"</string>
+    <string name="back_again_to_exit">Press back again to exit</string>
+</resources>
