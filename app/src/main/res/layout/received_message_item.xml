@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
 Copyright 2020 Mohamed Amgd
 
@@ -26,7 +25,7 @@ Copyright 2020 Mohamed Amgd
             android:id="@+id/image_message_profile"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/ic_otheruser"
+            android:background="@mipmap/ic_otheruser"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="8dp"
             app:layout_constraintLeft_toLeftOf="parent"

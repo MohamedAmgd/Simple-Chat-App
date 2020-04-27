@@ -19,6 +19,7 @@ package com.mohamedamgd.chatapp.ui.register;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -78,22 +79,24 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         mImageView = findViewById(R.id.logo);
 
-        mAnimatedVector = AnimatedVectorDrawableCompat.create(this, R.drawable.avd_anim);
-        mImageView.setImageDrawable(mAnimatedVector);
-        final Handler mainHandler = new Handler(Looper.getMainLooper());
-        mAnimatedVector.registerAnimationCallback(new Animatable2Compat.AnimationCallback() {
-            @Override
-            public void onAnimationEnd(final Drawable drawable) {
-                mainHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAnimatedVector.start();
-                    }
-                });
-            }
-        });
-        mAnimatedVector.start();
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 
+            mAnimatedVector = AnimatedVectorDrawableCompat.create(this, R.drawable.avd_anim);
+            mImageView.setImageDrawable(mAnimatedVector);
+            final Handler mainHandler = new Handler(Looper.getMainLooper());
+            mAnimatedVector.registerAnimationCallback(new Animatable2Compat.AnimationCallback() {
+                @Override
+                public void onAnimationEnd(final Drawable drawable) {
+                    mainHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mAnimatedVector.start();
+                        }
+                    });
+                }
+            });
+            mAnimatedVector.start();
+        }
         mSignUpButton.setOnClickListener(this);
         mLoginTextView.setOnClickListener(this);
     }
